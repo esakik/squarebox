@@ -214,3 +214,5 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 
+# Secrets
+local_settings.py
