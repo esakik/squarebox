@@ -17,11 +17,19 @@ import './Title.css';
 // functional componentがclass componentの親要素になることはできない
 // stateやその他メソッドの管理が難しくなるため、class よりも積極利用することを推奨
 // 少数のclass componentがstateを管理していて、その情報が必要な時だけpropsでfunctional componentに渡すのがよさそう
+//const Title = (props) => {
+// return(
+//   <div className="titleSection">
+//     <h2 id="versionStatement">{props.title}</h2>
+//     <p onClick={props.onClick} id="upgradeButton" className="upgrade-button">Upgrade</p>
+//   </div>
+// );
+//}
+
 const Title = (props) => {
  return(
    <div className="titleSection">
-     <h2 id="versionStatement">{props.title}</h2>
-     <p onClick={props.onClick} id="upgradeButton" className="upgrade-button">Upgrade</p>
+     <h2 style={props.titleStyle} id="versionStatement">{props.children}</h2>
    </div>
  );
 }
